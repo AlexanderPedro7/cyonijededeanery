@@ -11,6 +11,26 @@
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='orange' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+/* Meet the Excos */
+.excos-img {
+  width: 200px;         /* or any fixed equal value */
+  height: 200px;        /* same as width */
+  border-radius: 50%;   /* makes it circular */
+  object-fit: cover;    /* prevents image distortion */
+  overflow: hidden;     /* ensures no spillover */
+}
+
+.excos-img:hover {
+  transform: scale(1.05); /* Zoom in slightly */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.img-fluid:hover{
+  transform: scale(1.05); /* Zoom in slightly */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+
 /* Circular Indicators */
 .custom-indicator {
     width: 12px;
@@ -70,32 +90,72 @@
     color: rgb(219, 158, 79);
 }
 
-/* Contact form */
+
+/* contact form 2 */
+/* Limit container width */
 .contact-container {
-    
+  max-width: 900px;
     background: rgb(6, 190, 68);
-    padding: 30px;
     border-radius: 10px;
     box-shadow: 3px 4px 10px rgba(255, 255, 255, 0.808);
+
 }
+
+/* Make image smaller and responsive */
 .contact-img img {
-    width: 100%;
-    border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
-.form-control {
-    border-radius: 5px;
+
+/* Form controls */
+#contactForm .form-control {
+  font-size: 0.95rem;
 }
+
+/* Submit button style */
 .btn-submit {
-    background-color: #000000;
-    color: white;
-    font-weight: bold;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    width: 100%;
+  background-color: #012b03;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 4px;
 }
+
 .btn-submit:hover {
-    background-color: #c82333;
+    background-color: #0c0a0a;
+    color: white;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 0 15px;
+  }
+
+  .contact-img img {
+    max-width: 250px;
+    margin-bottom: 20px;
+  }
+
+  #contactForm .form-control {
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .btn-submit {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .feedback{
@@ -106,6 +166,8 @@
     justify-content: center; /* Center horizontally */
     min-height: 100vh; /* Ensures it takes full viewport height */
 }
+
+
 
 /* About Page */
 .about-bg-image {
@@ -225,4 +287,64 @@
       width: 100%;
       height: 100%;
       border: 0;
+    }
+    
+    /* Photo Gallery Page */
+    .gallery-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 550px) {
+      .gallery-img {
+        height: 320px;
+      }
+    }
+
+     /* Event Page square */
+    .gallery-img2 {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-img2:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 550px) {
+      .gallery-img2 {
+        height: Auto;
+      }
+    }
+
+    /* Event Page Rectangle */
+    .gallery-img3 {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-img3:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 550px) {
+      .gallery-img3 {
+        height: Auto;
+      }
     }
